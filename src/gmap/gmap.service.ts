@@ -91,8 +91,8 @@ export class GmapService {
           'K',
         ),
         rating: place.rating,
-        img: place.photos[0]?.photo_reference
-          ? `${process.env.APP_URL}/gmap/placephoto/${place.photos[0].photo_reference}`
+        img: !!place.photos
+          ? `${process.env.APP_URL}/gmap/placephoto/${place.photos[0]?.photo_reference}`
           : `${process.env.APP_URL}/gray.png`,
         location: {
           latitude: place.geometry.location.lat,
