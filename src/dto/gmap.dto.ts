@@ -12,6 +12,12 @@ export interface GmapDTO {
   };
 }
 
+export interface ResponseMsg {
+  responseCode: number;
+  responseMsg: string;
+  data: GmapDTO[];
+}
+
 export interface GmapResourceDTO {
   business_status: string;
   formatted_address: string;
